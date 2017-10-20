@@ -10,6 +10,7 @@ module.exports = {
     devtool: 'eval-source-map',
     entry: [
         'webpack/hot/only-dev-server',
+        'react-hot-loader/patch',
         path.join(__dirname,'/src/js/index')
     ],
     output: {
@@ -26,7 +27,7 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                exclude: /node_mudules/,
+                exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
                     presets: ['react','env']
@@ -52,7 +53,8 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             title: 'react-news',
-            inject: 'body'
+            inject: 'body',
+            template: './src/index.html'
         })
     ]
 }
