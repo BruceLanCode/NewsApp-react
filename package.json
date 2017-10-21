@@ -23,6 +23,7 @@
   "homepage": "https://github.com/lantuhui/NewsApp-react#readme",
   "dependencies": {
     "antd": "^2.13.6",
+    "axios": "^0.16.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-responsive": "^3.0.0",
