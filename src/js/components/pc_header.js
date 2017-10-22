@@ -21,6 +21,7 @@ const TabPane = Tabs.TabPane;
 const MenuItem = Menu.Item;
 import { BrowerRouter as Router,Route,Link } from 'react-router-dom';
 import axios from 'axios';
+import pcClass from  '../../css/pc.css';
 
 class PCHeader extends React.Component {
     constructor(){
@@ -98,7 +99,7 @@ class PCHeader extends React.Component {
     render(){
         const { getFieldDecorator } = this.props.form;
         const userShow = this.state.hasLogined
-            ?<MenuItem key="logout" class="register">
+            ?<MenuItem key="logout" className={pcClass.register}>
                 <Button type="primary" htmlType="button">{this.state.userNickName}</Button>
                 &nbsp;&nbsp;
                 <Link target="_blank" to={`/usercenter`}>
@@ -115,7 +116,7 @@ class PCHeader extends React.Component {
                 <Row>
                     <Col span={2}></Col>
                     <Col span={4}>
-                        <a href="" className="logo">
+                        <a href="" className={pcClass.logo}>
                             <img src="./src/images/logo.png" alt="logo"/>
                             <span>ReactNews</span>
                         </a>

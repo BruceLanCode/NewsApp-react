@@ -5,8 +5,6 @@ import React from 'react';
 import MediaQuery from 'react-responsive';
 import { BrowserRouter as Router,Route,Link } from 'react-router-dom';
 import PCIndex from './components/pc_index';
-import 'antd/dist/antd.css';
-import '../css/pc.css';
 
 export default class Root extends React.Component {
     render() {
