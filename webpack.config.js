@@ -14,7 +14,7 @@ module.exports = {
         path.join(__dirname,'/src/js/index')
     ],
     output: {
-        path: path.join(__dirname,'/dist/'),
+        path: path.resolve(__dirname,'dist/'),
         filename: '[name].js',
         publicPath: '/'
     },
@@ -35,7 +35,13 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                exclude: /global_css/,
                 loader: 'style-loader!css-loader?modules'
+            },
+            {
+                test: /\.css$/,
+                include: [path.join(__dirname, "/src/global_css")],
+                loader: 'style-loader!css-loader'
             },
             {
                 test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,

@@ -5,6 +5,9 @@ import React from 'react';
 import MediaQuery from 'react-responsive';
 import { BrowserRouter as Router,Route,Link } from 'react-router-dom';
 import PCIndex from './components/pc_index';
+import PCNewsDetail from './components/pc_news_detail';
+import '../global_css/antd.css';
+import '../global_css/antd_improve.css';
 
 export default class Root extends React.Component {
     render() {
@@ -12,7 +15,10 @@ export default class Root extends React.Component {
             <div>
                 <MediaQuery query="(min-device-width: 1224px)">
                     <Router>
-                        <Route path="/" exec component={ PCIndex }></Route>
+                        <div>
+                            <Route path="/" exact component={ PCIndex }></Route>
+                            <Route path="/details/:uniquekey" component={ PCNewsDetail }></Route>
+                        </div>
                     </Router>
                 </MediaQuery>
                 <MediaQuery query="(max-device-width: 1224px)">
