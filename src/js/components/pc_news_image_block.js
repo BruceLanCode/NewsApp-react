@@ -37,7 +37,6 @@ export default class extends React.Component {
             textOverflow: 'ellipsis'
         };
         const {news} = this.state;
-        console.log(news);
         const newsList = news.length
             ?news.map((newsItem,index) => (
                 <div key={index} className={pcClass.imageblock}>

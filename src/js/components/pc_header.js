@@ -110,14 +110,16 @@ class PCHeader extends React.Component {
             </MenuItem>
             : <MenuItem key="register" class="register">
                 <Icon type="appstore" />注册/登录
-            </MenuItem>
+            </MenuItem>;
+        const logoImg = require('../../images/logo.png');
         return (
             <header>
                 <Row>
                     <Col span={2}></Col>
                     <Col span={4}>
                         <a href="" className={pcClass.logo}>
-                            <img src="./src/images/logo.png" alt="logo"/>
+                            {/*<img src="./src/images/logo.png" alt="logo"/>*/}
+                            <img src={logoImg} alt=""/>
                             <span>ReactNews</span>
                         </a>
                     </Col>

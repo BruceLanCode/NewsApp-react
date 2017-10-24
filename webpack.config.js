@@ -14,7 +14,8 @@ module.exports = {
         path.join(__dirname,'/src/js/index')
     ],
     output: {
-        path: path.resolve(__dirname,'dist/'),
+        path: path.resolve(__dirname,'./dist'),
+        // path: '/dist/',
         filename: '[name].js',
         publicPath: '/'
     },
