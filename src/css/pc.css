@@ -93,3 +93,7 @@
     width: 257px;
     text-overflow: ellipsis;
 }
+
+.container{
+    text-align: center;
+}
