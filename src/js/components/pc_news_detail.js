@@ -50,6 +50,7 @@ export default class extends React.Component {
                     <Col span={2}></Col>
                 </Row>
                 <PCFooter></PCFooter>
+                <BackTop/>
             </div>
         )
     }
