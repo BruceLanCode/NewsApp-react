@@ -7,6 +7,7 @@ import { BrowserRouter as Router,Route,Link } from 'react-router-dom';
 import PCIndex from './components/pc_index';
 import PCNewsDetail from './components/pc_news_detail';
 import PCUserCenter from './components/pc_usercenter';
+import MobileIndex from './components/MobileIndex';
 import '../global_css/antd.css';
 import '../global_css/antd_improve.css';
 
@@ -24,7 +25,11 @@ export default class Root extends React.Component {
                     </Router>
                 </MediaQuery>
                 <MediaQuery query="(max-device-width: 1224px)">
-                    huangqian
+                    <Router>
+                        <div>
+                            <Route path="/" component={MobileIndex}></Route>
+                        </div>
+                    </Router>
                 </MediaQuery>
             </div>
         )
