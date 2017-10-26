@@ -4,14 +4,15 @@
 
 import React from 'react'
 import MobileHeader from './MobileHeader'
+import MobileFooter from './MobileFooter'
 import '../../global_css/mobile.css';
 
 export default class extends React.Component {
     render(){
         return (
-            <div id="mobileheader">
+            <div>
                 <MobileHeader></MobileHeader>
-                huangqian
+                <MobileFooter></MobileFooter>
             </div>
         )
     }

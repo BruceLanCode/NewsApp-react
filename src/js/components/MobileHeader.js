@@ -86,7 +86,7 @@ class MobileHeader extends React.Component {
             </Link> :<Icon type="setting" onClick={()=>this.setModalVisible.bind(this)(true)}></Icon>;
         const { getFieldDecorator } = this.props.form;
         return(
-            <div>
+            <div id="mobileheader">
                 <header>
                     <a href="/">
                         <img src={logoImg} alt=""/>
