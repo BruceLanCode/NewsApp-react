@@ -8,6 +8,7 @@ import PCIndex from './components/pc_index';
 import PCNewsDetail from './components/pc_news_detail';
 import PCUserCenter from './components/pc_usercenter';
 import MobileIndex from './components/MobileIndex';
+import MobileNewsDetail from './components/mobile_news_detail'
 import '../global_css/antd.css';
 import '../global_css/antd_improve.css';
 import '../global_css/pc.css';
@@ -28,7 +29,8 @@ export default class Root extends React.Component {
                 <MediaQuery query="(max-device-width: 1224px)">
                     <Router>
                         <div>
-                            <Route path="/" component={MobileIndex}></Route>
+                            <Route exact path="/" component={MobileIndex}></Route>
+                            <Route path="/details/:uniquekey" component={ MobileNewsDetail }></Route>
                         </div>
                     </Router>
                 </MediaQuery>
